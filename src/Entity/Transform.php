@@ -3,10 +3,10 @@
 
 namespace App\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
 
-interface transform{
 
-    public function transform(string $transform): string ;
+interface Transform{
+
+    public function transform(string $input): string ;
 
 }

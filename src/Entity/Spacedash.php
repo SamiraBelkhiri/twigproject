@@ -2,21 +2,16 @@
 
 namespace App\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
 
-/**
- * @ORM\Entity(repositoryClass="App\Repository\SpacedashRepository")
- */
-class Spacedash implements transform
+
+
+class Spacedash implements Transform
 {
-    /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
-     */
-    private $id;
-
-    public function transform(string $transform): string {
+    public function transform(string $input): string
+    {
+        $str = strtolower($input);
+        return str_replace(' ','-', $str);
 
     }
+
 }
